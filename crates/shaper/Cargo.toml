@@ -1,0 +1,15 @@
+[package]
+name = "shaper"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+brainfuck = { path = "../brainfuck" }
+harfbuzz-wasm = { path = "../harfbuzz-wasm" }
+wasm-bindgen.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+panic = "abort"
